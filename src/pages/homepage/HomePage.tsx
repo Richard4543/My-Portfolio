@@ -18,7 +18,7 @@ export default function HomePage() {
         <div className="flex-1 relative">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: 'url("../../public/SICLE.png")' }}
+            style={{ backgroundImage: 'url("/SICLE.png")' }}
           ></div>
           <div className="absolute inset-0 bg-gray-100 opacity-0"></div>
         </div>
