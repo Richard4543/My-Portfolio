@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export default function ContactPage() {
   const email = "ricardohernandez4543@gmail.com";

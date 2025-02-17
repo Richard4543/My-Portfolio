@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { FaTwitch, FaGithub, FaLinkedin, FaDiscord } from 'react-icons/fa';
 
 export default function HomePage() {
