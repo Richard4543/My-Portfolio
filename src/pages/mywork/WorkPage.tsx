@@ -14,8 +14,8 @@ const projectsData: Project[] = [
     id: 1,
     title: 'Tag Generator',
     description: "Quickly generate Tags, UDT's, and Sample Tags for Ignition 8.1.x",
-    image: '/domposer.png', // Ensure this image is in your public folder
-    downloadUrl: '/cookiemunch.zip'
+    image: '/TG.png', // Ensure this image is in your public folder
+    downloadUrl: '/Tag Generator.exe'
   },
   // You can add more projects here
 ];

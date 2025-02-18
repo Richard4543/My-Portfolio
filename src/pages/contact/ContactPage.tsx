@@ -1,4 +1,5 @@
 // import React from 'react';
+import { FaTwitch, FaGithub, FaLinkedin, FaDiscord } from 'react-icons/fa';
 
 export default function ContactPage() {
   const email = "ricardohernandez4543@gmail.com";
@@ -17,7 +18,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-8">
       <div className="max-w-4xl w-full">
-        <h1 className="text-4xl font-bold text-center mb-8">Contact Me</h1>
+        <h1 className="text-6xl font-bold text-center mb-8">Contact Me</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* LinkedIn Card */}
           <div 
@@ -41,6 +42,21 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+      {/* Vertical Social Media Icons on the Left (Desktop Only) */}
+            <div className="hidden md:flex absolute left-4 top-1/2 transform -translate-y-1/2 z-30 flex-col space-y-4">
+              <a href="https://www.twitch.tv/freezearrays" className="text-gray-700 hover:text-gray-900">
+                <FaTwitch size={20} />
+              </a>
+              <a href="https://github.com/Richard4543" className="text-gray-700 hover:text-gray-900">
+                <FaGithub size={20} />
+              </a>
+              <a href="https://www.linkedin.com/in/ricardo-hernandez-cs/" className="text-gray-700 hover:text-gray-900">
+                <FaLinkedin size={20} />
+              </a>
+              <a href="https://discord.gg/GdDKNnA2qh" className="text-gray-700 hover:text-gray-900">
+                <FaDiscord size={20} />
+              </a>
+            </div>
     </div>
   );
 }
