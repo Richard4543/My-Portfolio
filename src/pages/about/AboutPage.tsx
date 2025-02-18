@@ -34,7 +34,7 @@ export default function AboutPage() {
         </div>
         <div className="md:w-1/2">
           <img
-            src="/me.jpg"  // Ensure this image exists in your public folder
+            src="/me.jpg" 
             alt="Profile"
             className="w-64 h-64 object-cover rounded-full mx-auto"
           />

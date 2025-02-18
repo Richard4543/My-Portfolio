@@ -14,10 +14,10 @@ const projectsData: Project[] = [
     id: 1,
     title: 'Tag Generator',
     description: "Quickly generate Tags, UDT's, and Sample Tags for Ignition 8.1.x",
-    image: '/TG.png', // Ensure this image is in your public folder
+    image: '/TG.png',
     downloadUrl: '/Tag Generator.exe'
   },
-  // You can add more projects here
+  // Add more projects
 ];
 
 export default function WorkPage() {

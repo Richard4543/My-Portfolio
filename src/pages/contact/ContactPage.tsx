@@ -7,7 +7,7 @@ export default function ContactPage() {
   const handleEmailClick = () => {
     navigator.clipboard.writeText(email)
       .then(() => {
-        // Open the user's mail client with a pre-filled subject (optional)
+        // Open the user's mail client with a pre-filled subject
         window.location.href = `mailto:${email}?subject=Portfolio - Hello!`;
       })
       .catch((err) => {
