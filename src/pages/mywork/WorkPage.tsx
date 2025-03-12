@@ -17,6 +17,21 @@ const projectsData: Project[] = [
     image: '/TG.png',
     downloadUrl: '/Tag Generator.exe'
   },
+  {
+    id: 2,
+    title: 'Password Generator',
+    description: "Quickly generate encrypted passwords, from symbols adding complexity to large parsswords.",
+    image: '/password.png',
+    githubUrl: 'https://github.com/Richard4543/Password-Generator'
+  },
+  {
+    id: 3,
+    title: 'Java Console Clock',
+    description: "Run a like 24hr clock on the console output. Create alarms to notify once time/day is reached",
+    image: '/clock.png',
+    githubUrl: 'https://github.com/Richard4543/Clock-Java'
+  },
+  // A
   // Add more projects
 ];
 
