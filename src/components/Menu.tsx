@@ -40,13 +40,18 @@ export default function Menu() {
                 </Link>
               </li>
               <li>
-                <Link to="/mywork" onClick={() => setMenuOpen(false)}>
+                <Link to="/work" onClick={() => setMenuOpen(false)}>
                   <span className="block text-xl hover:text-gray-700">My Work</span>
                 </Link>
               </li>
               <li>
                 <Link to="/contact" onClick={() => setMenuOpen(false)}>
                   <span className="block text-xl hover:text-gray-700">Contact</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/fun" onClick={() => setMenuOpen(false)}>
+                  <span className="block text-xl hover:text-gray-700">Fun</span>
                 </Link>
               </li>
             </ul>
