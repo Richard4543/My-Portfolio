@@ -9,9 +9,10 @@
       content="
         default-src 'self';
         script-src 'self' https://embed.twitch.tv;
-        frame-src https://player.twitch.tv;
+        frame-src 'self' https://player.twitch.tv https://embed.twitch.tv;
         style-src 'self' 'unsafe-inline';
         img-src 'self' data: https:;
+        connect-src 'self';
       "
     >
 
