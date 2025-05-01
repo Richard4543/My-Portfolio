@@ -1,5 +1,7 @@
 // src/pages/fun/BlogsPage.tsx
 import React, { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface Post {
   id: string;
@@ -8,34 +10,32 @@ interface Post {
   excerpt: string;
   videoUrl?: string;
   url: string;
+  content: string;
 }
 
 export function BlogsPage() {
+  // State
   const [allPosts, setAllPosts] = useState<Post[]>([]);
-  const [visible, setVisible] = useState(10);
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('All');
+  const [visible, setVisible] = useState(10);
 
-  // 1) Load posts.json at runtime
+  // Load JSON
   useEffect(() => {
     fetch('/data/posts.json')
-      .then(res => res.json())
-      .then((data: Post[]) => setAllPosts(data))
+      .then((r) => r.json())
+      .then(setAllPosts)
       .catch(console.error);
   }, []);
 
-  // 2) Build category list (All + unique categories)
-  const categories = ['All', ...Array.from(new Set(allPosts.map(p => p.category)))];
-
-  // 3) Filter by category & search term
+  // Filters & pagination
+  const categories = ['All', ...Array.from(new Set(allPosts.map((p) => p.category)))];
   const filtered = allPosts
-    .filter(p => category === 'All' || p.category === category)
-    .filter(p => p.title.toLowerCase().includes(search.toLowerCase()));
-
-  // 4) Paginate
+    .filter((p) => category === 'All' || p.category === category)
+    .filter((p) => p.title.toLowerCase().includes(search.toLowerCase()));
   const displayed = filtered.slice(0, visible);
 
-  // 5) Scroll into view helper
+  // Scroll helper
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -47,12 +47,13 @@ export function BlogsPage() {
       <aside className="px-4">
         <h3 className="font-semibold mb-2">Categories</h3>
         <ul className="space-y-1">
-          {categories.map(cat => (
+          {categories.map((cat) => (
             <li key={cat}>
               <button
-                className={`w-full text-left px-2 py-1 rounded ${
-                  category === cat ? 'bg-blue-100' : ''
-                }`}
+                className={
+                  'w-full text-left px-2 py-1 rounded ' +
+                  (category === cat ? 'bg-blue-100' : '')
+                }
                 onClick={() => setCategory(cat)}
               >
                 {cat}
@@ -62,7 +63,7 @@ export function BlogsPage() {
         </ul>
       </aside>
 
-      {/* Main Content */}
+      {/* Main */}
       <main className="px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Blogs</h2>
 
@@ -73,11 +74,11 @@ export function BlogsPage() {
             placeholder="Search posts..."
             className="w-full border border-gray-300 rounded px-4 py-2"
             value={search}
-            onChange={e => setSearch(e.target.value)}
+            onChange={(e) => setSearch(e.target.value)}
           />
           {search && (
             <ul className="absolute top-full left-0 mt-1 w-full border border-gray-200 bg-white shadow-lg z-50">
-              {filtered.slice(0, 5).map(p => (
+              {filtered.slice(0, 5).map((p) => (
                 <li
                   key={p.id}
                   className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
@@ -92,7 +93,7 @@ export function BlogsPage() {
 
         {/* Posts */}
         <div className="space-y-12">
-          {displayed.map(p => (
+          {displayed.map((p) => (
             <article
               key={p.id}
               id={p.id}
@@ -101,7 +102,7 @@ export function BlogsPage() {
               <h3 className="text-2xl font-semibold mb-2">{p.title}</h3>
               <p className="text-gray-600 mb-4">Category: {p.category}</p>
 
-              {/* Optional YouTube embed */}
+              {/* Video */}
               {p.videoUrl && (
                 <div className="mb-4">
                   <iframe
@@ -114,26 +115,55 @@ export function BlogsPage() {
                 </div>
               )}
 
-              <p className="text-gray-700 mb-4">{p.excerpt}</p>
+              {/* Markdown */}
+              <div className="prose max-w-none mb-4">
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  components={{
+                    code: (props: any) => {
+                      const { inline, className, children } = props;
+                      if (inline) {
+                        return (
+                          <code className={className ?? ''}>
+                            {children}
+                          </code>
+                        );
+                      }
+                      return (
+                        <pre className="overflow-x-auto bg-gray-100 rounded p-4 my-4">
+                          <code className={className ?? ''}>
+                            {children}
+                          </code>
+                        </pre>
+                      );
+                    }
+                  }}
+                >
+                  {p.content}
+                </ReactMarkdown>
+              </div>
 
-              <a
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
-              >
-                Read more…
-              </a>
+              {/* Read more */}
+              {p.url && (
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:underline"
+                >
+                  Read more…
+                </a>
+              )}
             </article>
           ))}
         </div>
 
-        {/* Load More */}
+        {/* View more */}
         {visible < filtered.length && (
           <div className="text-center mt-8">
             <button
               className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"
-              onClick={() => setVisible(v => v + 10)}
+              onClick={() => setVisible((v) => v + 10)}
             >
               View More
             </button>
@@ -143,3 +173,4 @@ export function BlogsPage() {
     </div>
   );
 }
+ 

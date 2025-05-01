@@ -22,6 +22,15 @@
       "excerpt": "Follow along to build your own Pac-Man clone using HTML5 canvas.",
       "videoUrl": "https://www.youtube.com/embed/HJ7RinS85CU",
       "url": "https://myblog.com/pacman-js"
+    },
+    {
+      "id": "post4",
+      "title": "Refreshing an Ignition Table",
+      "category": "Tutorial",
+      "excerpt": "How to refresh a table's data property in Ignition Vision Scripting.",
+      "videoUrl": "",
+      "url": "",
+      "content": "In Ignition Vision, you can refresh a table's data property like this:\n\n```python\n# This example could go in actionPerformed or a button's script.\ntable = event.source.parent.getComponent(\"Table\")\nsystem.db.refresh(table, \"data\")\n```"
     }
   ]
   
