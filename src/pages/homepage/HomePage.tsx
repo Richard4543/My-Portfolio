@@ -76,7 +76,7 @@ export default function HomePage() {
         <div className="bg-gray-800 text-white p-6 rounded-lg hover:bg-gray-700 transition-shadow shadow-xl">
           <h2 className="text-2xl font-semibold mb-2">🚀 Latest Project</h2>
           <p>Tag Generator: Quickly generate Tags, UDTs, and sample tags for Ignition 8.1.x.</p>
-          <a href="/mywork" className="text-indigo-400 hover:underline">View Details →</a>
+          <a href="./work" className="text-indigo-400 hover:underline">View Details →</a>
         </div>
         <div className="bg-gray-800 text-white p-6 rounded-lg hover:bg-gray-700 transition-shadow shadow-xl">
           <h2 className="text-2xl font-semibold mb-2">🎮 Join My Discord</h2>
