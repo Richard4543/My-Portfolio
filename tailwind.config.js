@@ -4,6 +4,11 @@ module.exports = {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    'sky',
+    'day',
+    'night'
+  ],
   theme: {
     extend: {},
   },
