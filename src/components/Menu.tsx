@@ -20,7 +20,7 @@ export default function Menu() {
       {/* Collapsible Side Menu Overlay */}
       {menuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-20 transition-opacity duration-500"
+          className="fixed inset-0 bg-black bg-opacity-50 z-30 transition-opacity duration-500"
           onClick={() => setMenuOpen(false)}
         >
           <div

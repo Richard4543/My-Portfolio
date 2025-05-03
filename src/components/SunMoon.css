@@ -24,15 +24,26 @@
   /* 3) Sun beams */
   .sunbeams {
     position: absolute;
-    inset: -25px;
+    /* center on the sun */
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
     animation: spin 28s linear infinite;
+    /* spin around its own center */
+    transform-origin: center center;
   }
+  
   .sunbeams .beam {
     position: absolute;
     width: 5px;
-    height: 30px;
+    height: 100px;           /* length of each beam */
     background: #7a6021;
-    transform-origin: 50% 125px;
+    /* place each beam at the sun’s center, then extend downward */
+    top: 0;
+    left: calc(50% - 2.5px); /* center minus half the beam’s width */
+    transform-origin: bottom center;
   }
   /* eight beams around the circle */
   .beam1 { transform: rotate(0deg) translateY(-125px); }
