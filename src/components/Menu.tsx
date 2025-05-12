@@ -50,6 +50,11 @@ export default function Menu() {
                 </Link>
               </li>
               <li>
+                <Link to="/ignition" onClick={() => setMenuOpen(false)}>
+                  <span className="block text-xl hover:text-gray-700">Ignition</span>
+                </Link>
+              </li>
+              <li>
                 <Link to="/fun" onClick={() => setMenuOpen(false)}>
                   <span className="block text-xl hover:text-gray-700">Fun</span>
                 </Link>

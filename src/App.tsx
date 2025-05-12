@@ -6,6 +6,7 @@ import AboutPage from './pages/about/AboutPage';
 import WorkPage from './pages/mywork/WorkPage';
 import ContactPage from './pages/contact/ContactPage';
 import FunLayout from './pages/fun/FunLayout';
+import IgnitionLayout from './pages/ignition/IgnitionLayout';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/work" element={<WorkPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/fun/*" element={<FunLayout />} />
+        <Route path="/ignition/*" element={<IgnitionLayout />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
