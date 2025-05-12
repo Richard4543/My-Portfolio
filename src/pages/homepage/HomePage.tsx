@@ -67,8 +67,8 @@ export default function HomePage() {
 {/* bg-black bg-opacity-70 */}
       <section className="min-h-screen flex items-center justify-center px-4 relative z-10">
         <div className="w-full max-w-3xl p-9 rounded-xl mx-auto text-center">
-          <h1 className="text-6xl sm:text-8xl md:text-8xl lg:text-9xl font-bold text-gray-800 leading-tight">Welcome</h1>
-          <p className="text-3xl sm:text-1xl md:text-1xl lg:text-3xl font-bold text-gray-800 leading-tight">Hi, I'm Ricardo.</p>
+          <h1 className="text-6xl sm:text-8xl md:text-8xl lg:text-9xl font-bold text-gray-600 leading-tight">Welcome</h1>
+          <p className="text-3xl sm:text-1xl md:text-1xl lg:text-3xl font-bold text-gray-600 leading-tight">Hi, I'm Ricardo.</p>
         </div>
       </section>
 
