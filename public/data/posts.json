@@ -1,11 +1,12 @@
 [
     {
       "id": "post1",
-      "title": "Understanding React Hooks",
-      "category": "Web",
+      "title": "Understanding MQTT Modules",
+      "category": "MQTT",
       "excerpt": "Learn how React Hooks can simplify your functional components.",
       "videoUrl": "https://www.youtube.com/embed/dpw9EHDh2bM",
-      "url": "https://myblog.com/react-hooks"
+      "url": "https://myblog.com/react-hooks",
+      "content": "### Understanding MQTT Modules\n\nMQTT is a lightweight pub/sub protocol… (your full post here)"
     },
     {
       "id": "post2",
@@ -13,7 +14,8 @@
       "category": "Web",
       "excerpt": "A beginner-friendly introduction to TypeScript.",
       "videoUrl": "https://www.youtube.com/embed/BwuLxPH8IDs",
-      "url": "https://myblog.com/typescript-intro"
+      "url": "https://myblog.com/typescript-intro",
+      "content": "### Understanding MQTT Modules\n\nMQTT is a lightweight pub/sub protocol… (your full post here)"
     },
     {
       "id": "post3",
@@ -21,7 +23,8 @@
       "category": "Game",
       "excerpt": "Follow along to build your own Pac-Man clone using HTML5 canvas.",
       "videoUrl": "https://www.youtube.com/embed/HJ7RinS85CU",
-      "url": "https://myblog.com/pacman-js"
+      "url": "https://myblog.com/pacman-js",
+      "content": "### Understanding MQTT Modules\n\nMQTT is a lightweight pub/sub protocol… (your full post here)"
     },
     {
       "id": "post4",
