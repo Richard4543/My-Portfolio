@@ -22,7 +22,7 @@ export default function IgnitionLayout(){
                 <ul className="flex items-center space-x-12">
                 <li>
                     <NavLink
-                    to="/ignition/IgnitionBlogsPage"
+                    to="/ignition/blogs"
                     className={({ isActive }) =>
                         isActive ? 'text-blue-500 font-semibold' : 'text-gray-700'
                     }
@@ -32,7 +32,7 @@ export default function IgnitionLayout(){
                 </li>
                 <li>
                     <NavLink
-                    to="/ignition/CodeSnippetsPage"
+                    to="/ignition/snippets"
                     className={({ isActive }) =>
                         isActive ? 'text-blue-500 font-semibold' : 'text-gray-700'
                     }
@@ -42,7 +42,7 @@ export default function IgnitionLayout(){
                 </li>
                 <li>
                     <NavLink
-                    to="/ignition/FileExamplesPage"
+                    to="/ignition/files"
                     className={({ isActive }) =>
                         isActive ? 'text-blue-500 font-semibold' : 'text-gray-700'
                     }

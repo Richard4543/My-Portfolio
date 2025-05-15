@@ -2,6 +2,7 @@ import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
 import { BlogsPage } from './BlogsPage';
 import { LivePage } from './LivePage';
 import { GuestbookPage } from './GuestbookPage';
+import GalleryPage from './GalleryPage';
 
 export default function FunLayout() {
   return (
@@ -50,6 +51,16 @@ export default function FunLayout() {
               Guestbook
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/fun/gallery"
+              className={({ isActive }) =>
+                isActive ? 'text-blue-500 font-semibold' : 'text-gray-700'
+              }
+            >
+              Gallery
+            </NavLink>
+          </li>
         </ul>
       </nav>
 
@@ -59,6 +70,7 @@ export default function FunLayout() {
           <Route path="blogs" element={<BlogsPage />} />
           <Route path="live" element={<LivePage />} />
           <Route path="guestbook" element={<GuestbookPage />} />
+          <Route path="gallery" element={<GalleryPage />} />
           <Route path="" element={<Navigate to="blogs" replace />} />
         </Routes>
       </div>
