@@ -1,5 +1,5 @@
 // import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Menu from './components/Menu';
 import HomePage from './pages/homepage/HomePage';
 import AboutPage from './pages/about/AboutPage';
@@ -10,7 +10,7 @@ import IgnitionLayout from './pages/ignition/IgnitionLayout';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Menu />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path="/ignition/*" element={<IgnitionLayout />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 export default App;
