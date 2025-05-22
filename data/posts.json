@@ -1,0 +1,39 @@
+[
+    {
+      "id": "post1",
+      "title": "Understanding MQTT Modules",
+      "category": "MQTT",
+      "excerpt": "Learn how React Hooks can simplify your functional components.",
+      "videoUrl": "https://www.youtube.com/embed/dpw9EHDh2bM",
+      "url": "https://myblog.com/react-hooks",
+      "content": "### Understanding MQTT Modules\n\nMQTT is a lightweight pub/sub protocol… (your full post here)"
+    },
+    {
+      "id": "post2",
+      "title": "Getting Started with TypeScript",
+      "category": "Web",
+      "excerpt": "A beginner-friendly introduction to TypeScript.",
+      "videoUrl": "https://www.youtube.com/embed/BwuLxPH8IDs",
+      "url": "https://myblog.com/typescript-intro",
+      "content": "### Understanding MQTT Modules\n\nMQTT is a lightweight pub/sub protocol… (your full post here)"
+    },
+    {
+      "id": "post3",
+      "title": "Building a Pac-Man Game in JavaScript",
+      "category": "Game",
+      "excerpt": "Follow along to build your own Pac-Man clone using HTML5 canvas.",
+      "videoUrl": "https://www.youtube.com/embed/HJ7RinS85CU",
+      "url": "https://myblog.com/pacman-js",
+      "content": "### Understanding MQTT Modules\n\nMQTT is a lightweight pub/sub protocol… (your full post here)"
+    },
+    {
+      "id": "post4",
+      "title": "Refreshing an Ignition Table",
+      "category": "Tutorial",
+      "excerpt": "How to refresh a table's data property in Ignition Vision Scripting.",
+      "videoUrl": "",
+      "url": "",
+      "content": "In Ignition Vision, you can refresh a table's data property like this:\n\n```python\n# This example could go in actionPerformed or a button's script.\ntable = event.source.parent.getComponent(\"Table\")\nsystem.db.refresh(table, \"data\")\n```"
+    }
+  ]
+  

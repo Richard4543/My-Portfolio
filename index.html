@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Combined CSP: allow Twitch, YouTube, and your own content -->
+    <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' https://embed.twitch.tv;
+        frame-src 'self' 
+          https://player.twitch.tv 
+          https://embed.twitch.tv 
+          https://www.youtube.com 
+          https://www.youtube-nocookie.com;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data: https:;
+        connect-src 'self' https://uselessfacts.jsph.pl https://api.farmsense.net;
+      "
+    />
+
+    <title>Ricardo Hernandez</title>
+    <script type="module" crossorigin src="/assets/index-Br1pmpdN.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D6EydCju.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
