@@ -1,0 +1,30 @@
+[
+    {
+      "id": "post1",
+      "title": "Discord Bot",
+      "category": "Project Updates",
+      "excerpt": "Finally Built my Discord Bot!",
+      "videoUrl": "",
+      "url": "",
+      "content": "After some great time now, I've finally built my Discord Bot!!\n\nRecently I made a Discord bot, which may seem a bit useless, but it's more for the streaming I am trying to build here. With this new bot, I am able to listen for Tiktok Live chats and have the users interact with my stream, giving them the ability to request music. THe functionality goes users say 'Play <music>' which is then retreived by some code on my server, that sends a parsed message to the Discord bot using an API token. Hopefully you guys get to see it live action <- get it lol"
+    },
+    {
+      "id": "post2",
+      "title": "Old Web GIFS are the Best!",
+      "category": "Web",
+      "excerpt": "Finally Found great old web gifs to post here.",
+      "videoUrl": "",
+      "url": "https://reggie.lol",
+      "content": "Found these awsome old web GIFs. Mainly found through watching Reggie's twitch streams, but he did also show me how I can collect them and display them on here. Check them out when you get a chance"
+    },
+    {
+      "id": "post3",
+      "title": "Google's new Veo 3 AI",
+      "category": "News",
+      "excerpt": "Is AI getting exciting or scary?",
+      "videoUrl": "https://www.youtube.com/watch?v=TmsK_Ym8kD4",
+      "url": "https://deepmind.google/models/veo/",
+      "content": "Just ran a few tests using Google's new VEO 3 AI. Cant say its exciting, but it sure amazing work. Previously with AI video, they were quite detectable, seeing how smooth/perfect they ran. Now with Veo 3, its....quite realistic. Ask it to create a video of someone jumping off a cliff to some water...you would expect perfectly created wave, so unreal that it has to be AI. WIth Veo 3, the waves look natrual, human movements are very indestinctable from the real thing. Its like you are watching a recorded video. What do you guys think about this stuff now...?"
+    }
+  ]
+  
