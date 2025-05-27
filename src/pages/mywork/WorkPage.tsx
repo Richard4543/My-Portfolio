@@ -31,6 +31,12 @@ const projectsData: Project[] = [
     image: '/clock.png',
     githubUrl: 'https://github.com/Richard4543/Clock-Java'
   },
+  {
+    id: 4,
+    title: 'TikTok Live Connector W/ Discord Bot',
+    description: "This project is a lightweight, outbound‐only bridge service that runs in Docker and uses Node.js to listen to TikTok LIVE chat (via the reverse-engineered tiktok-live-connector library) for play <song> commands, then automatically relays m!play <song> into a designated Discord channel using the official discord.js client.",
+    image: './discordtiktok.png'
+  },
   // A
   // Add more projects
 ];

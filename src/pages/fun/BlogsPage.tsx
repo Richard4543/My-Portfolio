@@ -22,7 +22,7 @@ export function BlogsPage() {
 
   // Load JSON
   useEffect(() => {
-    fetch('/data/posts.json')
+    fetch('/data/funPosts.json')
       .then((r) => r.json())
       .then(setAllPosts)
       .catch(console.error);
